@@ -64,6 +64,7 @@ section .box .circle h2 {
   font-size: 4em;
   color: white;
   text-align: center;
+  animation: blinker 3s ease-in-out infinite;
 }
 
 section i {
@@ -77,9 +78,15 @@ section i:nth-child(even) {
   border: 3px solid #ffae00;
 }
 
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
 @keyframes animate {
   0% {
-    transform: translateY(2000%);
+    transform: translateY(-2000%);
     opacity: 1;
     background: red;
   }
@@ -121,7 +128,7 @@ section i:nth-child(even) {
     background: yellow;
   }
   100% {
-    transform: translateY(-2000%);
+    transform: translateY(2000%);
     opacity: 1;
     background: red;
   }
