@@ -71,7 +71,7 @@ section i {
   position: absolute;
   background: rgb(255, 183, 0);
   border-radius: 100%;
-  animation: animate linear infinite;
+  animation: animate ease-in infinite;
 }
 
 section i:nth-child(even) {
@@ -86,7 +86,7 @@ section i:nth-child(even) {
 
 @keyframes animate {
   0% {
-    transform: translateY(-2000%);
+    transform: translateX(2000%);
     opacity: 1;
     background: red;
   }
@@ -128,7 +128,7 @@ section i:nth-child(even) {
     background: yellow;
   }
   100% {
-    transform: translateY(2000%);
+    transform: translateX(-2000%);
     opacity: 1;
     background: red;
   }
