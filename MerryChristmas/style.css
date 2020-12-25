@@ -10,6 +10,14 @@ body {
   overflow: hidden;
 }
 
+section .author {
+  position: relative;
+  text-align: center;
+  color: white;
+  font-size: 35px;
+  font-family: "Times New Roman", Times, serif;
+}
+
 section {
   display: flex;
   justify-content: center;
