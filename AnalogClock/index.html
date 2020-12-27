@@ -7,6 +7,12 @@
     </head>
     <body>
         <div class="author">@DrewBarbosa</div>
+        <div class="dateDay">
+            <div id="day"></div>
+            <div id="month"></div> 
+        </div>
+       
+
         <div class="clock">
             <div class="hour">
                 <div class="hr" id="hr"></div>
@@ -17,6 +23,11 @@
             <div class="sec">
                 <div class="sc" id="sc"></div>
             </div>
+        </div>
+
+        <div class="dateYear">
+            <div id="year"></div>
+            <div id="weekDay"></div>
         </div>
 
         <div class="digitalClock">
@@ -40,12 +51,12 @@
             const sc = document.querySelector('#sc');
 
             setInterval(() => {
-                let day = new Date();
+                let date = new Date();
 
                 /*Analog Clock*/
-                let hh = day.getHours()*30;
-                let mm = day.getMinutes() *deg;
-                let ss = day.getSeconds() *deg;
+                let hh = date.getHours()*30;
+                let mm = date.getMinutes() *deg;
+                let ss = date.getSeconds() *deg;
 
                 hr.style.transform =  `rotateZ(${(hh)+(mm/12)}deg) `;
                 mn.style.transform =  `rotateZ(${mm}deg) `;
@@ -57,13 +68,13 @@
                 let seconds = document.querySelector("#seconds");
                 let ampm = document.querySelector("#ampm");
 
-                let h = day.getHours();
-                let m = day.getMinutes();
-                let s = day.getSeconds();
+                let h = date.getHours();
+                let m = date.getMinutes();
+                let s = date.getSeconds();
                 let am = "AM"
 
                 if(h>12){
-                    h = h -12;
+                    h = h - 12;
                     let am = "PM"
                 }
 
@@ -76,6 +87,33 @@
                 minutes.innerHTML = m+":";
                 seconds.innerHTML = s+"&nbsp";
                 ampm.innerHTML = am;
+
+
+                
+
+                //adding date
+                var weekdays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+
+                let day = document.querySelector("#day");
+                let month = document.querySelector("#month");
+                let year = document.querySelector("#year");
+                let weekday = document.querySelector("#weekDay");
+                let d = date.getDate();
+                let my = date.getMonth()+1;
+                let y = date.getFullYear();
+                
+
+                if(d < 10)
+                    d='0'+d;
+
+                if(m < 10)
+                    m='0'+m;
+
+                day.innerHTML = d;
+                month.innerHTML = my;
+                year.innerHTML = y;
+                weekday.innerHTML = weekdays[date.getDay()];
+                
             });
 
             

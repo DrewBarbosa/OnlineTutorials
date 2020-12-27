@@ -149,10 +149,11 @@ body.light .toggleClass::before {
 .author {
   position: absolute;
   text-align: center;
-  color: white;
+  color: #fff;
   font-size: 35px;
   font-family: "Times New Roman", Times, serif;
-  margin-top: -500px;
+  /*  //margin-top: -500px; */
+  height: 600px;
 }
 
 body.light .author {
@@ -161,4 +162,38 @@ body.light .author {
 
 body.light .digitalClock {
   color: #091921;
+}
+
+.dateDay {
+  margin-right: 8px;
+  color: #fff;
+  font-size: 35px;
+  position: relative;
+  font-style: italic;
+  font-weight: bold;
+}
+
+body.light .dateDay {
+  color: #091921;
+}
+
+.dateYear {
+  margin-left: 8px;
+  color: #fff;
+  font-size: 35px;
+  position: relative;
+  font-style: italic;
+  font-weight: bold;
+}
+
+body.light .dateYear {
+  color: #091921;
+}
+
+body.light #weekDay {
+  color: #ff105e;
+}
+
+body.light #year {
+  color: #008eff;
 }
