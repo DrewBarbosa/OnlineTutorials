@@ -7,3 +7,5 @@
 <a href="https://youtu.be/weZFfrjF-k4"> Analog Clock pt1 creating </a>
 
 <a href="https://youtu.be/-PRyFcAceYA"> Analog Clock pt2 toggle between dark and light mode</a>
+
+<a href="https://youtu.be/s9mGaRSRGZw"> Analog and Digital Clock </a>

@@ -2,10 +2,11 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Analog Clock</title>
+        <title>Analog & Digital Clock</title>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <div class="author">@DrewBarbosa</div>
         <div class="clock">
             <div class="hour">
                 <div class="hr" id="hr"></div>
@@ -17,7 +18,16 @@
                 <div class="sc" id="sc"></div>
             </div>
         </div>
+
+        <div class="digitalClock">
+            <div id="hour"></div>
+            <div id="minutes"></div>
+            <div id="seconds"></div>
+            <div id="ampm"></div>
+        </div>
+
         <div class="toggleClass" onclick="toggleClass()"></div>
+       
         <script type="text/javascript">
            function toggleClass(){
             const body = document.querySelector('body');
@@ -31,6 +41,8 @@
 
             setInterval(() => {
                 let day = new Date();
+
+                /*Analog Clock*/
                 let hh = day.getHours()*30;
                 let mm = day.getMinutes() *deg;
                 let ss = day.getSeconds() *deg;
@@ -38,6 +50,32 @@
                 hr.style.transform =  `rotateZ(${(hh)+(mm/12)}deg) `;
                 mn.style.transform =  `rotateZ(${mm}deg) `;
                 sc.style.transform =  `rotateZ(${ss}deg) `;
+
+                /* Digital Clock */
+                let hour = document.querySelector("#hour");
+                let minutes = document.querySelector("#minutes");
+                let seconds = document.querySelector("#seconds");
+                let ampm = document.querySelector("#ampm");
+
+                let h = day.getHours();
+                let m = day.getMinutes();
+                let s = day.getSeconds();
+                let am = "AM"
+
+                if(h>12){
+                    h = h -12;
+                    let am = "PM"
+                }
+
+                //add zero before single digit numbers
+                h = (h < 10) ? "0" + h : h
+                m = (m < 10) ? "0" + m : m
+                s = (s < 10) ? "0" + s : s
+
+                hour.innerHTML = h+":";
+                minutes.innerHTML = m+":";
+                seconds.innerHTML = s+"&nbsp";
+                ampm.innerHTML = am;
             });
 
             

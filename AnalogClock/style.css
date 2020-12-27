@@ -137,3 +137,28 @@ body.light .toggleClass {
 body.light .toggleClass::before {
   content: "Dark Mode";
 }
+
+.digitalClock {
+  display: flex;
+  color: #fff;
+  font-size: 4em;
+  margin-top: 500px;
+  position: absolute;
+}
+
+.author {
+  position: absolute;
+  text-align: center;
+  color: white;
+  font-size: 35px;
+  font-family: "Times New Roman", Times, serif;
+  margin-top: -500px;
+}
+
+body.light .author {
+  color: #091921;
+}
+
+body.light .digitalClock {
+  color: #091921;
+}
