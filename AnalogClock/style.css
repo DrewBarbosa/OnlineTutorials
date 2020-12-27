@@ -179,11 +179,17 @@ body.light .dateDay {
 
 .dateYear {
   margin-left: 8px;
-  color: #fff;
   font-size: 35px;
   position: relative;
   font-style: italic;
   font-weight: bold;
+}
+
+.dateYear #year {
+  color: #ff105e;
+}
+.dateYear #weekDay {
+  color: #008eff;
 }
 
 body.light .dateYear {
