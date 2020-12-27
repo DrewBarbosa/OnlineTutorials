@@ -118,4 +118,22 @@ body.light .mn::before {
   font-size: 18px;
   border-radius: 50%;
   background: #d1dae3;
+  color: #d1dae3;
+  font-family: consolas;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.toggleClass::before {
+  position: absolute;
+  left: 25px;
+  content: "Light Mode";
+  white-space: nowrap;
+}
+body.light .toggleClass {
+  background: #091921;
+  color: #091921;
+}
+body.light .toggleClass::before {
+  content: "Dark Mode";
 }
