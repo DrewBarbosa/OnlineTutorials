@@ -67,11 +67,11 @@ section::before {
 .card .face.front::before {
   content: "";
   position: absolute;
-  bottom: 40px;
+  top: 10px;
   right: 40px;
   width: 60px;
   height: 60px;
-  background: #fff;
+  background: yellow;
   border-radius: 50%;
   opacity: 0.5;
 }
@@ -79,26 +79,26 @@ section::before {
 .card .face.front::after {
   content: "";
   position: absolute;
-  bottom: 40px;
+  top: 10px;
   right: 80px;
   width: 60px;
   height: 60px;
-  background: #fff;
+  background: red;
   border-radius: 50%;
   opacity: 0.7;
 }
 
-.card .face.front .credit {
+/* .card .face.front .credit {
   position: absolute;
   left: 40px;
   top: 30px;
   color: #fff;
   font-weight: 500;
-}
+} */
 
 .card .face.front .bank {
   position: absolute;
-  right: 40px;
+  left: 40px;
   top: 25px;
   color: #fff;
   font-weight: 500;
@@ -113,9 +113,17 @@ section::before {
   max-width: 64px;
 }
 
-.card .face.front .number {
+.card .face.front .contactless {
   position: absolute;
-  bottom: 130px;
+  top: 87px;
+  left: 120px;
+  max-width: 64px;
+  transform: rotate(90deg);
+}
+
+.card .face.back .number {
+  position: absolute;
+  bottom: 70px;
   left: 40px;
   color: #fff;
   font-weight: 500;
@@ -125,9 +133,9 @@ section::before {
   font-family: "Orbitron", sans-serif;
 }
 
-.card .face.front .valid {
+.card .face.back .valid {
   position: absolute;
-  bottom: 90px;
+  bottom: 30px;
   left: 40px;
   display: flex;
   justify-content: center;
@@ -136,9 +144,10 @@ section::before {
   font-weight: 300;
   line-height: 1em;
   text-align: right;
+  text-transform: uppercase;
 }
 
-.card .face.front .valid span:last-child {
+.card .face.back .valid span:last-child {
   margin-left: 20px;
   font-size: 16px;
   font-weight: 400;
@@ -153,6 +162,7 @@ section::before {
   font-weight: 300;
   font-size: 16px;
   letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .card .face.back .blackbar {
@@ -160,12 +170,12 @@ section::before {
   top: 40px;
   width: 100%;
   height: 60px;
-  background: #000;
+  background: gray;
 }
 
 .card .face.back .ccvtext {
   position: absolute;
-  top: 120px;
+  top: 10px;
   left: 30px;
 }
 
@@ -173,41 +183,90 @@ section::before {
   color: #fff;
   font-weight: 400;
   font-size: 12px;
-  text-transform: uppercase;
   letter-spacing: 2px;
 }
 
-.card .face.back .ccvtext .whiteBar {
+/* .card .face.back .ccvtext .whiteBar {
   position: relative;
   width: 400px;
   height: 40px;
   background: #fff;
   margin-top: 5px;
-}
+} */
 
 .card .face.back .ccvtext .ccv {
-  position: relative;
-  background: #ccc;
-  color: #111;
-  width: 50px;
-  height: 30px;
-  font-weight: 600;
-  letter-spacing: 3px;
+  position: absolute;
+  bottom: -255px;
+  left: 140px;
   display: flex;
   justify-content: center;
   align-items: center;
-  top: -35px;
-  left: 395px;
+  color: #fff;
+  font-weight: 300;
+  line-height: 1em;
+  text-align: right;
+}
+
+.card .face.back .ccvtext span:last-child {
+  margin-left: 20px;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 2px;
 }
 
 .card .face.back .text {
   position: absolute;
-  bottom: 30px;
-  left: 30px;
-  right: 30px;
+  top: 130px;
+  text-align: justify;
+  right: 10px;
   color: #fff;
-  font-size: 11px;
+  font-size: 10px;
   line-height: 1.4em;
-  font-weight: 300;
+  font-weight: 400;
+  font-weight: bold;
+}
+
+.card .face.front .qrcode {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  background-color: rgba(141, 33, 33, 0.05);
+}
+
+.card .face.back::before {
+  content: "";
+  position: absolute;
+  bottom: 120px;
+  left: 40px;
+  width: 60px;
+  height: 60px;
+  background: darkblue;
+  border-radius: 50%;
+  opacity: 0.9;
+}
+
+.card .face.back::after {
+  content: "";
+  position: absolute;
+  bottom: 120px;
+  left: 80px;
+  width: 60px;
+  height: 60px;
+  background: rgb(0, 89, 255);
+  border-radius: 50%;
+  opacity: 0.7;
+}
+
+.card .face.back .type {
+  position: absolute;
+  top: 110px;
+  left: 70px;
+  color: #fff;
+}
+
+.card .face.back .type h4 {
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 2px;
   font-weight: bold;
 }
