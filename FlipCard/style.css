@@ -242,7 +242,7 @@ section::before {
   height: 60px;
   background: darkblue;
   border-radius: 50%;
-  opacity: 0.9;
+  opacity: 0.7;
 }
 
 .card .face.back::after {
@@ -254,7 +254,7 @@ section::before {
   height: 60px;
   background: rgb(0, 89, 255);
   border-radius: 50%;
-  opacity: 0.7;
+  opacity: 0.5;
 }
 
 .card .face.back .type {
