@@ -11,3 +11,5 @@
 <a href="https://youtu.be/s9mGaRSRGZw"> Analog and Digital Clock </a>
 
 <a href="https://youtu.be/XeX1vsaufF0"> 3D Flip Debit Card </a>
+
+<a href="https://youtu.be/puiBYkN3bOE"> Firework Animation </a>
