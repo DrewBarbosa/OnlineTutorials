@@ -1,9 +1,6 @@
 body {
   margin: 0;
   padding: 0;
-}
-
-section {
   display: flex;
   width: 100%;
   height: 100vh;
@@ -14,7 +11,6 @@ section {
 
 .headtext {
   font-size: 120px;
-  animation-name: head;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   color: #fff;
@@ -25,12 +21,45 @@ section {
 .footer {
   color: #fff;
   bottom: 20px;
-  right: 613px;
+  right: 731px;
   position: absolute;
   align-content: center;
   text-align: center;
   font-weight: bold;
   font-size: 20px;
+  animation: blinker 5s ease-in-out infinite;
+}
+#ft::before {
+  content: "@DrewBarbosa";
+}
+
+.footer1 {
+  color: #fff;
+  bottom: 20px;
+  right: 497px;
+  position: absolute;
+  align-content: center;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  animation: blinker 10s ease-in-out infinite;
+}
+#ft1::before {
+  content: "@DrewBarbosa";
+}
+
+.assinado {
+  color: #fff;
+  bottom: 150px;
+  right: 530px;
+  position: absolute;
+  align-content: center;
+  text-align: center;
+  font-weight: bold;
+  font-size: 50px;
+}
+#sign::before {
+  content: "Matos Barbosa";
 }
 
 #text {
@@ -40,6 +69,12 @@ section {
 #text::before {
   content: "";
   animation: animate ease-in-out infinite 20s;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
 }
 
 @keyframes animate {
